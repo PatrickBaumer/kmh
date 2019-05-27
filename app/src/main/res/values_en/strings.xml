@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">kmh</string>
+    <string name="titleTextView">dieVerbrauchsApp</string>
+    <string name="umrechenButton">Rechne es mir um!</string>
+    <string name="eingabeKMEditText">Hier die gefahrenen KM eingeben</string>
+    <string name="getankteLiterEditText">Hier die getankten Liter eingeben</string>
+    <string name="ergEditText">Ergebnis</string>
+
+</resources>
