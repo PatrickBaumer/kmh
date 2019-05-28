@@ -5,5 +5,6 @@
     <string name="eingabeKMEditText">enter driven kilmeters</string>
     <string name="getankteLiterEditText">enter amount of gas</string>
     <string name="ergEditText">Result</string>
+    <string name="btnChangeLangView">Auf deutsch stellen</string>
 
 </resources>

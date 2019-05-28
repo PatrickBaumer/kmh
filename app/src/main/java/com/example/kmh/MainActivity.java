@@ -6,11 +6,14 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.Locale;
+
 import utils.LocaleHelper;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private String mLanguageCode = "default";
+    private String mLanguageCode = "de";
 
     protected Button _umrechenButton =null;
     protected TextView _titleTextView = null;
@@ -18,9 +21,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected EditText _eingabeKMEditText = null;
     protected TextView _ergTextView = null;
     protected Button _btnChangeLangView = null;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +34,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
         _ergTextView = findViewById(R.id.ergTextView);
         _btnChangeLangView = findViewById(R.id.btnChangeLangView);
 
-        _umrechenButton.setOnClickListener(this);
 
+        _umrechenButton.setOnClickListener(this);
         _btnChangeLangView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                chnLang();
+            public void onClick(View view) {
+                if (Locale.getDefault().getLanguage()== "de") {
+                    mLanguageCode = "en";
+                    LocaleHelper.setLocale(MainActivity.this, mLanguageCode);
+
+                }else
+                { LocaleHelper.setLocale(MainActivity.this, mLanguageCode);}
+                //chnLang();
                 recreate();
             }
         });
@@ -51,9 +57,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     protected void chnLang(){
-        LocaleHelper.setLocale(MainActivity.this, mLanguageCode);
-
     }
+
     protected void eventUmrechnenButton(){
         double Liter = 0;
         double Km = 0;
@@ -67,8 +72,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         double erg =  Liter*100/Km;
         _ergTextView.setText(""+ erg);
-
-
-
     }
 }
