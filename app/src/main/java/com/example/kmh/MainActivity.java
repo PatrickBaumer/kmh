@@ -10,7 +10,7 @@ import utils.LocaleHelper;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
-    private String mLanguageCode = "en";
+    private String mLanguageCode = "default";
 
     protected Button _umrechenButton =null;
     protected TextView _titleTextView = null;
@@ -34,21 +34,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
         _ergTextView = findViewById(R.id.ergTextView);
         _btnChangeLangView = findViewById(R.id.btnChangeLangView);
 
-        _btnChangeLangView.setOnClickListener(this);
         _umrechenButton.setOnClickListener(this);
+
+        _btnChangeLangView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chnLang();
+                recreate();
+            }
+        });
     }
 
     @Override
     public void onClick(View v) {
         eventUmrechnenButton();
-        //chnLang();
-
-
     }
 
     protected void chnLang(){
-
         LocaleHelper.setLocale(MainActivity.this, mLanguageCode);
+
     }
     protected void eventUmrechnenButton(){
         double Liter = 0;
