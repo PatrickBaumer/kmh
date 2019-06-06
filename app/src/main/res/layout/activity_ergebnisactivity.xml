@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".Ergebnisactivity">
+
+
+    <TextView
+        android:id="@+id/TitleTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/titleTextView"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/eingeg_KM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/eingeg_KM"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/eingeg_KM2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/eingeg_KM"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/eingeg_L"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/eingeg_L"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/eingeg_L2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/eingeg_L"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/ergTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/ergEditText"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/zurueck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/zurueck" />
+
+
+</LinearLayout>

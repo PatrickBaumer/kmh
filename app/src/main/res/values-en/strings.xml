@@ -6,5 +6,12 @@
     <string name="getankteLiterEditText">enter amount of gas</string>
     <string name="ergEditText">Result</string>
     <string name="btnChangeLangView">Auf deutsch stellen</string>
+    <string name="zurueck">back</string>
+    <string name="eingeg_KM">KM:</string>
+    <string name="eingeg_L">Liter:</string>
+    <string name="hilfe_button">Help</string>
+    <string name="hilfeTextView"> In this App you can calculate your average fuel consumption. Just
+        enter your driven kilometers and the amount of gas your refueled.</string>
+    <string name="resetbutton">reset</string>
 
 </resources>

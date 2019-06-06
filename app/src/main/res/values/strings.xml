@@ -6,5 +6,13 @@
     <string name="getankteLiterEditText">Hier die getankten Liter eingeben</string>
     <string name="ergEditText">Ergebnis</string>
     <string name="btnChangeLangView">Set to English</string>
+    <string name="zurueck">zurück</string>
+    <string name="eingeg_KM">KM:</string>
+    <string name="eingeg_L">Liter:</string>
+    <string name="hilfe_button">Hilfe</string>
+    <string name="hilfeTextView">in dieser App kannst du den Spritverbrauch deines
+    Fahrzeuges berechnen. Gebe Dazu die Gefahrenen Kilometer und die getankte Menge Kraftstoff
+    ein. Als Ergebnis erhällst du den Verbrauch auf 100 Kilometer</string>
+    <string name="resetbutton">Zurücksetzen</string>
 
 </resources>
