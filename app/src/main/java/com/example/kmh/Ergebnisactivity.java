@@ -31,7 +31,7 @@ public class Ergebnisactivity extends Activity implements View.OnClickListener {
         _eingabe_L2 = findViewById(R.id.eingeg_L);
         _zurueck.setOnClickListener(this);
         Intent intent = getIntent();
-        _ergTextView2.setText("der verbrauch"+intent.getStringExtra("ergebnis"));
+        _ergTextView2.setText(intent.getStringExtra("ergebnis"));
         _eingabe_L2.setText(intent.getStringExtra("liter"));
         _eingabe_KM2.setText(intent.getStringExtra("km"));
 

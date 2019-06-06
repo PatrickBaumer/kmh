@@ -1,6 +1,7 @@
 package com.example.kmh;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,12 +38,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         _getankteLiterEditText = findViewById(R.id.getankteLiterEditText);
         _eingabeKMEditText = findViewById(R.id.eingabeKMEditText);
         _resetButton = findViewById(R.id.reset_button);
-
         _btnChangeLangView = findViewById(R.id.btnChangeLangView);
         _hilfe_button = findViewById(R.id.hilfe_button);
 
-
         _umrechenButton.setOnClickListener(this);
+
         _btnChangeLangView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         _resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                reset();
+            reset();
             }
 
         });
@@ -78,15 +78,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+       if (isValid()) {
+            dialogBuilder.setMessage("fuck you");
+            dialogBuilder.setPositiveButton("hard",null);
+            AlertDialog dialog = dialogBuilder.create();
+            dialog.show();
+
+    }
+
+        else{
         Intent intent = new Intent(this, Ergebnisactivity.class);
         intent.putExtra("ergebnis", ""+eventUmrechnenButton());
         intent.putExtra("km",(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim()));
         intent.putExtra("liter",(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()));
-        startActivity(intent);
-
-
-
-    }
+        startActivity(intent);}
+            }
 
     protected void reset()
     {
@@ -94,19 +101,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
         _eingabeKMEditText.setText("");
     }
 
+    protected Boolean isValid()
+    {
+       if (((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim() !="") return false;
+        else if (Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString()) != 0) return false;
+        else if (((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim() != "") return false;
+        else if (Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()) !=0) return false;
+        else return true;
+
+    }
     protected double eventUmrechnenButton() {
-        double Liter = 0;
-        double Km = 0;
+        double Liter = (Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()));
+        double Km = (Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim()));
+        double erg;
 
-        //if(((EditText)findViewById(R.id.eingabeKMEditText)).getText().toString().trim() || ((EditText)findViewById(R.id.getankteLiterEditText)).getText().toString().trim() == )
-        //{ }
-        try {
-            Liter = Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim());
-            Km = Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim());
-        } catch (NumberFormatException ex) {      }
 
-        double erg = Liter * 100 / Km;
-        return erg;
+             erg = Liter * 100 / Km;
+                return erg;
 
+    }
+
+
+    protected void disable(){
+        _umrechenButton.setEnabled(false);
+        _resetButton.setEnabled(false);
+    }
+    protected void enable(){
+        _umrechenButton.setEnabled(true);
+        _resetButton.setEnabled(true);
     }
 }

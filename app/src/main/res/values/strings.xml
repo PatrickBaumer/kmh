@@ -11,7 +11,7 @@
     <string name="eingeg_L">Liter:</string>
     <string name="hilfe_button">Hilfe</string>
     <string name="hilfeTextView">in dieser App kannst du den Spritverbrauch deines
-    Fahrzeuges berechnen. Gebe Dazu die Gefahrenen Kilometer und die getankte Menge Kraftstoff
+    Fahrzeuges berechnen. Gebe dazu die gefahrenen Kilometer und die getankte Menge Kraftstoff
     ein. Als Ergebnis erhällst du den Verbrauch auf 100 Kilometer</string>
     <string name="resetbutton">Zurücksetzen</string>
 

@@ -10,8 +10,8 @@
     <string name="eingeg_KM">KM:</string>
     <string name="eingeg_L">Liter:</string>
     <string name="hilfe_button">Help</string>
-    <string name="hilfeTextView"> In this App you can calculate your average fuel consumption. Just
-        enter your driven kilometers and the amount of gas your refueled.</string>
+    <string name="hilfeTextView"> In this app you can calculate your average fuel consumption. Just
+        enter your driven kilometers and the amount of gas you refueled.</string>
     <string name="resetbutton">reset</string>
 
 </resources>
