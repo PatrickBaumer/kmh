@@ -20,6 +20,7 @@
         android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:text="@string/titleTextView"
+        android:textColor="@android:color/background_dark"
         android:textSize="24sp" />
 
     <EditText
@@ -42,9 +43,10 @@
 
     <Button
         android:id="@+id/umrechenButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:background="@android:color/darker_gray"
@@ -53,7 +55,7 @@
 
     <Button
         android:id="@+id/reset_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
@@ -62,7 +64,7 @@
 
     <Button
         android:id="@+id/hilfe_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
@@ -71,7 +73,7 @@
 
     <Button
         android:id="@+id/btnChangeLangView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
