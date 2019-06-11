@@ -82,15 +82,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         String km = _eingabeKMEditText.getText().toString().trim();
         String liter = _getankteLiterEditText.getText().toString().trim();
 
-
-
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
         if ( km.length() == 0 || liter.length() == 0 || Double.parseDouble(liter) == 0 || Double.parseDouble(km) == 0) {
             dialogBuilder.setMessage(this.getString(R.string.falsch));
             dialogBuilder.setPositiveButton("OK",null);
             AlertDialog dialog = dialogBuilder.create();
             dialog.show();
-
     }
 
         else{
@@ -107,17 +104,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         _eingabeKMEditText.setText("");
     }
 
-    protected Boolean isValid()
-    {
-       /*if (((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim().length() "") return true;
-        else if (Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString()) == 0) return true;
-        else if (((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim() != "") return true;
-        else if (Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()) ==0) return true;
-        else return false;
-        */
-       return false;
-
-    }
     protected double eventUmrechnenButton() {
         double Liter = (Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()));
         double Km = (Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim()));
@@ -127,15 +113,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
              erg = Liter * 100 / Km;
                 return erg;
 
-    }
-
-
-    protected void disable(){
-        _umrechenButton.setEnabled(false);
-        _resetButton.setEnabled(false);
-    }
-    protected void enable(){
-        _umrechenButton.setEnabled(true);
-        _resetButton.setEnabled(true);
     }
 }
