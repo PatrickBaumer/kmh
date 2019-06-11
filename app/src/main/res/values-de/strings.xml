@@ -14,4 +14,5 @@
     Fahrzeuges berechnen. Gebe dazu die gefahrenen Kilometer und die getankte Menge Kraftstoff
     ein. Als Ergebnis erhällst du den Verbrauch auf 100 Kilometer</string>
     <string name="resetbutton">Zurücksetzen</string>
+    <string name="falsch">Bitte gib alle Daten richtig ein!</string>
 </resources>

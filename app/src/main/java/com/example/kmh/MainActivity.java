@@ -78,10 +78,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+
+        String km = _eingabeKMEditText.getText().toString().trim();
+        String liter = _getankteLiterEditText.getText().toString().trim();
+
+
+
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-       if (isValid()) {
-            dialogBuilder.setMessage("fuck you");
-            dialogBuilder.setPositiveButton("hard",null);
+        if ( km.length() == 0 || liter.length() == 0 || Double.parseDouble(liter) == 0 || Double.parseDouble(km) == 0) {
+            dialogBuilder.setMessage(this.getString(R.string.falsch));
+            dialogBuilder.setPositiveButton("OK",null);
             AlertDialog dialog = dialogBuilder.create();
             dialog.show();
 
@@ -103,11 +109,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     protected Boolean isValid()
     {
-       if (((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim() !="") return false;
-        else if (Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString()) != 0) return false;
-        else if (((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim() != "") return false;
-        else if (Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()) !=0) return false;
-        else return true;
+       /*if (((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString().trim().length() "") return true;
+        else if (Double.parseDouble(((EditText) findViewById(R.id.eingabeKMEditText)).getText().toString()) == 0) return true;
+        else if (((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim() != "") return true;
+        else if (Double.parseDouble(((EditText) findViewById(R.id.getankteLiterEditText)).getText().toString().trim()) ==0) return true;
+        else return false;
+        */
+       return false;
 
     }
     protected double eventUmrechnenButton() {
